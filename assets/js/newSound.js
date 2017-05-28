@@ -29,7 +29,8 @@ function button(w, h, x, y, label) {
     }
 }
 
-function soundMenu(sound, x, y) {
+function soundMenu(sound, x, y, path) {
+    this.path = path;
     this.downloaded = false;
     this.sound = sound;
     this.x = x;
@@ -55,7 +56,7 @@ function soundMenu(sound, x, y) {
 
         if (this.down.testClick() && !this.downloaded) {
             this.downloaded = true;
-            DownloadFile(this.sound.url);
+            DownloadFile(this.sound.path);
         }
     }
 }

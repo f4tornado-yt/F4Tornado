@@ -22,11 +22,11 @@ function setup() {
     text('Ghost Bees', 30, 150);
     text('Sapphire Clouds', 30, 230);
     text('Space Invasion', 30, 310);
-    airplanesMenu = new soundMenu(airplanes, 30, 40);
-    bellsMenu = new soundMenu(bells, 30, 110);
-    ghostbeesMenu = new soundMenu(ghostbees, 30, 180);
-    sapphireMenu = new soundMenu(sapphire, 30, 260);
-    spaceinvasionMenu = new soundMenu(spaceinvasion, 30, 340);
+    airplanesMenu = new soundMenu(airplanes, 30, 40, 'assets/sounds/airplanes.mp3');
+    bellsMenu = new soundMenu(bells, 30, 110, 'assets/sounds/bells and crackle.mp3');
+    ghostbeesMenu = new soundMenu(ghostbees, 30, 180, 'assets/sounds/ghost bees.m4a');
+    sapphireMenu = new soundMenu(sapphire, 30, 260, 'assets/sounds/Sapphire Clouds.mp3');
+    spaceinvasionMenu = new soundMenu(spaceinvasion, 30, 340, 'assets/sounds/space invasion.mp3');
 }
 
 function draw() {
