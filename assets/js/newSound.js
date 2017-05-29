@@ -1,7 +1,3 @@
-function DownloadFile(file, name) {
-    download(file, name);
-}
-
 function button(w, h, x, y, label) {
     this.label = label;
     this.w = w;
@@ -29,21 +25,17 @@ function button(w, h, x, y, label) {
     }
 }
 
-function soundMenu(sound, x, y, path) {
-    this.path = path;
-    this.downloaded = false;
+function soundMenu(sound, x, y, path, name) {
     this.sound = sound;
     this.x = x;
     this.y = y;
     this.play = new button(65, 50, this.x, this.y, 'play/resume');
     this.stop = new button(50, 50, this.x + 70, this.y, 'pause');
-    this.down = new button(50, 50, this.x + 320, this.y, 'download');
     this.show = function() {
         fill(0);
         rect(this.x+100, this.y-5, map(this.sound.currentTime(), 0, this.sound.duration(), 0, 200), 10);
         this.play.show();
         this.stop.show();
-        this.down.show();
     }
     this.update = function() {
         if (this.play.testClick() && !this.sound.isPlaying()) {
@@ -52,11 +44,6 @@ function soundMenu(sound, x, y, path) {
 
         if (this.stop.testClick()) {
             this.sound.pause();
-        }
-
-        if (this.down.testClick() && !this.downloaded) {
-            this.downloaded = true;
-            DownloadFile(this.sound.path);
         }
     }
 }
