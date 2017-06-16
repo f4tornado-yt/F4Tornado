@@ -6,3 +6,7 @@ a {color:rgb(255, 122, 0); float:right; background-image: url("assets/imgs/butto
 h2 {float:right; color:rgb(255, 122, 0); background-color:rgb(255, 255, 0); width:9em; height:20em; text-align:center;}
 .weird {left:6.35em;}
 #defaultCanvas0 {top:-10em;}
+.nostyle {all: initial;
+    * {
+        all: unset;
+    }}
