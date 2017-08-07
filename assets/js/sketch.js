@@ -4,9 +4,10 @@ var bellsMenu;
 var ghostbeesMenu;
 var sapphireMenu;
 var spaceinvasionMenu;
+
 function preload() {
     airplanes = loadSound('assets/sounds/airplanes.mp3');
-    bells = loadSound('assets/sounds/bells and crackle.mp3');
+    bells = loadSound('assets/sounds/Drone.mp3');
     ghostbees = loadSound('assets/sounds/ghost bees.mp3');
     sapphire = loadSound('assets/sounds/Sapphire Clouds.mp3');
     spaceinvasion = loadSound('assets/sounds/space invasion.mp3');
@@ -18,7 +19,7 @@ function setup() {
     cnv.parent('container');
     fill(0);
     text('Airplanes', 30, 10);
-    text('Bells and Crackle', 30, 80);
+    text('Drone', 30, 80);
     text('Ghost Bees', 30, 150);
     text('Sapphire Clouds', 30, 230);
     text('Space Invasion', 30, 310);
